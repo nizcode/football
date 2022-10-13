@@ -1,2 +1,4 @@
 #ignore data folder
 StatsBombData/
+wyscoutEvents/
+__pycache__/
