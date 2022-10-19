@@ -251,3 +251,56 @@ def createGoalMouth():
     plt.axis('off')
 
     return fig, ax
+
+
+def createGoalMouthSB():
+    # Adopted from FC Python
+    # Create figure
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
+
+    linecolor = 'black'
+
+    # Pitch Outline & Centre Line
+    plt.plot([0, 80], [0, 0], color=linecolor)
+    plt.plot([80, 80], [0, 60], color=linecolor)
+    plt.plot([0, 0], [0, 60], color=linecolor)
+
+    # Left Penalty Area
+    # plt.plot([12.5, 52.5], [16.5, 16.5], color=linecolor)
+    # plt.plot([52.5, 52.5], [16.5, 0], color=linecolor)
+    # plt.plot([12.5, 12.5], [0, 16.5], color=linecolor)
+
+    plt.plot([18, 18], [0, 18], color=linecolor)
+    plt.plot([18, 62], [18, 18], color=linecolor)
+    plt.plot([62, 62], [18, 0], color=linecolor)
+
+    # # Left 6-yard Box
+    plt.plot([30, 30], [0, 6], color=linecolor)
+    plt.plot([30, 50], [6, 6], color=linecolor)
+    plt.plot([50, 50], [6, 0], color=linecolor)
+
+    # Goal
+    #   plt.plot([41.5 - 5.34, 41.5 - 5.34], [-2, 0], color=linecolor)
+    #   plt.plot([23.5 + 5.34, 41.5 - 5.34], [-2, -2], color=linecolor)
+    #   plt.plot([23.5 + 5.34, 23.5 + 5.34], [0, -2], color=linecolor)
+
+    # Prepare Circles
+    leftPenSpot = plt.Circle((40, 12), 0.8, color=linecolor)
+
+    # Draw Circles
+    ax.add_patch(leftPenSpot)
+
+    # Prepare Arcs
+    #  leftArc = Arc((32.5, 11), height=18.3, width=18.3, angle=0, theta1=38, theta2=142, color=linecolor)
+
+    # Draw Arcs
+    # ax.add_patch(leftArc)
+
+    # Tidy Axes
+    # plt.axis('off')
+
+    return fig, ax
+
+
+createGoalMouthSB()

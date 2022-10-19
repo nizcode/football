@@ -10,7 +10,7 @@ def xnum1(pos1,tri):
         t = np.concatenate((tri[i,:],pos1))
         tA = abs((((t[1,0]-t[0,0])*(t[2,1]-t[0,1]))-((t[2,0]-t[0,0])*(t[1,1]-t[0,1])))/2)
         areaP.append(tA)
-    print(areaT)
-    print(sum(areaP))
+   # print(areaT)
+    #print(sum(areaP))
     return(isclose(areaT,sum(areaP),abs_tol=0.00001))
 
