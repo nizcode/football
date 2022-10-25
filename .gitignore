@@ -2,3 +2,7 @@
 StatsBombData/
 wyscoutEvents/
 __pycache__/
+events/
+
+#more data 
+crossData.csv
